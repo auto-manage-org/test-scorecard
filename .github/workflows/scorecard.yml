@@ -1,6 +1,7 @@
 # This workflow uses actions that are not certified by GitHub. They are provided
 # by a third-party and are governed by separate terms of service, privacy
 # policy, and support documentation.
+# test fork
 
 name: Scorecard supply-chain security
 on:
@@ -12,13 +13,13 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
+    branches: [ "main" ]
 
 # Declare default permissions as read only.
 permissions: read-all
 
 jobs:
   analysis:
-    if : ${{ github.repository == 'auto-manage-org/test-scorecard' }}
     name: Scorecard analysis
     runs-on: ubuntu-latest
     permissions:
